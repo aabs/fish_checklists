@@ -1,5 +1,5 @@
 # Defined in /home/d235108/.config/fishdots/plugins/fishdots_checklist/init/rc1.d/01-functions.fish @ line 118
-function chkl_spawn --description 'creates an instance of the checklist' --argument definition_path
+function __fd2_chkl_spawn --description 'creates an instance of the checklist' --argument definition_path
 	set -l name (basename $definition_path)
     set -l ts (date +"%Y%m%d%H%M")
     set -l slug (to_slug "$ts-$name")

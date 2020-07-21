@@ -1,5 +1,5 @@
 # Defined in /home/d235108/.config/fishdots/plugins/fishdots_checklist/init/rc1.d/01-functions.fish @ line 50
-function chkl_open --description 'find active checklist matching <pattern>, and edit' --argument search_pattern
+function __fd2_chkl_open --description 'find active checklist matching <pattern>, and edit' --argument search_pattern
 	if "$search_pattern" = ""
         set search_pattern "*.md"
     end
