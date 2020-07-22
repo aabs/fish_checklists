@@ -1,4 +1,6 @@
-# Defined in /home/d235108/.config/fishdots/plugins/fishdots_checklist/init/rc1.d/01-functions.fish @ line 42
 function __fd2_chkl_find --argument name_pattern
-	fishdots_find_select $FD_CHECKLIST_INSTANCES_HOME $name_pattern
+  __fd2_select_from_find $fd2_checklist_instances_home $name_pattern
+  if test $status -eq 0
+    __fd2_chkl_edit
+  end
 end

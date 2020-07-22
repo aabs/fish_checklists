@@ -1,7 +1,8 @@
-# Defined in /home/d235108/.config/fishdots/plugins/fishdots_checklist/init/rc1.d/01-functions.fish @ line 150
 function __fd2_chkl_archive --description 'select an active checklist for archival'
-	fd_file_selector $FD_CHECKLIST_INSTANCES_HOME "*.md"
-    if set -q fd_selected_item
-        _chkl_archive $fd_selected_item
-    end
+  __fd2_select_file $fd2_checklist_instances_home "*.md"
+  if set -q fd2_selected_item
+    __fd2_chkl_archive_inst $fd2_selected_item
+  end
 end
+
+#  vim: set ts=2 sw=2 tw=80 et foldmethod=syntax foldlevelstart=20 :
