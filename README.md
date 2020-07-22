@@ -1,8 +1,10 @@
-# Fish Tech
-> jump to folders by technology
+# Fish Checklists
+> boost productivity through checklists rather than tasks
 
-Fish tech is a little plugin allowing quick switching between technology
-specific areas in a large development folder hierarchy
+A slightly more elaborate plugin that helps you maintain a collection of
+checklists that you can start.  I use it to create checklists for things I do
+every day, or when certain events happen, like client meetings or project
+kick-offs.
 
 ![](header.png)
 
@@ -11,59 +13,39 @@ specific areas in a large development folder hierarchy
 Fisher:
 
 ```sh
-fisher add aabs/fish_tech
+fisher add aabs/fish_checklists
 ```
 
 ## Usage example
 
-Imaging your development code tree looks like this:
+Display usage
 
 ```shell
-$ tree -L 2 ~/dev
-/home/me/dev
-└── by-technology
-    ├── awk
-    ├── elixir
-    ├── fish
-    ├── html
-    ├── javascript
-    ├── kubernetes
-    ├── markdown
-    ├── nixos
-    ├── rdf
-    └── rust
+$ chkl
 
-12 directories, 1 file
-```
+Command Usage for chkl
+----------------------
+fishdots plugin for checklists
 
-You can quickly jump to your elixir code tree to find that project you've
-forgotten the name of:
+chkl <command> [options] [args]
 
-```shell
-~ $ tech cd elixir
-
-~/d/b/elixir $
-```
-
-if your memory is really bad like mine, then you can even get help selecting the technology areas using `fzf`:
-
-```shell
-~ $ tech open
-
-  rust
-  rdf
-  projects.db
-  nixos
-  markdown
-  kubernetes
-  javascript
-  html
-  fish
-  elixir
-  editors
-> awk
-  12/12
->
+chkl help       Display help for command chkl
+chkl archive    select and archive an active instance
+chkl archiveall archive all active instances
+chkl define     create new checklist and open in editor
+chkl edit       edit the current checklist instance
+chkl editdef    edit the current checklist definition
+chkl find       find an active checklist
+chkl home       change to the checklist definitions folder
+chkl ls         list active checklists
+chkl lsar       list inactive checklists
+chkl lsdef      list checklist definitions
+chkl open       open for an active checklist for editing
+chkl openar     open a archived checklist for editing
+chkl opendef    open a checklist definition for editing
+chkl start      select and start checklist and open in editor
+chkl tasks      list next task from active checklists
+chkl sync       save changes and push to origin repo
 ```
 
 ## Release History
@@ -77,7 +59,7 @@ Andrew Matthews – [@aabs](https://twitter.com/aabs) – industrial.inference@g
 
 Distributed under the GPL3 license. See ``LICENSE`` for more information.
 
-[https://github.com/aabs/fish_tech](https://github.com/aabs/fish_tech)
+[https://github.com/aabs/fish_checklists](https://github.com/aabs/fish_checklists)
 
 ## Contributing
 
