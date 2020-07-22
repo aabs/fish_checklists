@@ -7,6 +7,7 @@ function __fd2_chkl_spawn --description 'creates an instance of the checklist' -
 
   # if the definition already exists, edit that instead
   if not test -e $target_path
+    echo cp "$definition_path" "$target_path"
     cp "$definition_path" "$target_path"
   end
 
