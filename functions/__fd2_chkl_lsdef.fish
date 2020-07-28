@@ -1,3 +1,8 @@
 function __fd2_chkl_lsdef
-	__fd2_find $fd2_checklist_definitions_home "*.md"
+        set results (__fd2_find $fd2_checklist_definitions_home "*.md")
+        set ctr 1
+        for r in results
+                echo $ctr (basename $r)
+                set ctr (math $ctr + 1)
+        end
 end
