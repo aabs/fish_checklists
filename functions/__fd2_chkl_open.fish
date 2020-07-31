@@ -3,7 +3,7 @@ function __fd2_chkl_open --description 'find active checklist matching <pattern>
   if test "$search_pattern" = ""
     set search_pattern "*.md"
   end
-  __fd2_select_from_find $fd2_checklist_instances_home "$search_pattern"
+  fd2_select_from_find $fd2_checklist_instances_home "$search_pattern"
     if set -q fd2_selected_item
         __fd2_chkl_select_inst $fd2_selected_item
         __fd2_chkl_edit
