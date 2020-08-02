@@ -1,5 +1,5 @@
 function __fd2_chkl_define --description 'creates a new definition of a checklist' 
-  set -l slug (__fd2_to_slug "$argv")
+  set -l slug (fd2_to_slug "$argv")
   echo slug is $slug
   set -l target_path "$fd2_checklist_definitions_home/$slug.md"
   echo path is $target_path

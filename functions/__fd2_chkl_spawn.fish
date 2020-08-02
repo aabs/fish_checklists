@@ -2,7 +2,7 @@
 function __fd2_chkl_spawn --description 'creates an instance of the checklist' --argument definition_path
   set -l name (basename $definition_path)
   set -l ts (date +"%Y%m%d%H%M")
-  set -l slug (__fd2_to_slug "$ts-$name")
+  set -l slug (fd2_to_slug "$ts-$name")
   set -l target_path "$fd2_checklist_instances_home/$slug"
 
   # if the definition already exists, edit that instead
