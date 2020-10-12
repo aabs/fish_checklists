@@ -1,5 +1,5 @@
 function __fd2_chkl_archive --description 'select an active checklist for archival'
-  fd2_select_file $fd2_checklist_instances_home "*.md"
+  fd2_select_file -r "$fd2_checklist_instances_home" -p '*.md'
   if set -q fd2_selected_item
     __fd2_chkl_archive_inst $fd2_selected_item
   end
