@@ -4,7 +4,7 @@ fd2_select_from_find -r "$fd2_checklist_archive_home" -p '*.md'
         if set -q EDITOR
             eval '$EDITOR "'$fd2_selected_item'"'
         else
-            nvim $fd2_selected_item
+            vim $fd2_selected_item
         end
     end
 end
