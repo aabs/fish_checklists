@@ -24,4 +24,6 @@ if not set -q fd2_checklist_current_definition
   echo -e "# welcome to fishdots checklists\n- [ ] put your checklist items here\n" > $fd2_checklist_current_definition
 end
 
+alias cks="__fd2_chkl_start -p '*.md'"
+
 #  vim: set ts=2 sw=2 tw=80 et foldmethod=syntax foldlevelstart=20 : 
