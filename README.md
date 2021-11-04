@@ -13,7 +13,7 @@ kick-offs.
 Fisher:
 
 ```sh
-fisher add aabs/fish_checklists
+fisher install aabs/fish_checklists
 ```
 
 ## Usage example
